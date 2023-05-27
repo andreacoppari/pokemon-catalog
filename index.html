@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catalogo Pokemon</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Catalogo Pokémon</h1>
+    <div id="team-icon" onclick="toggleteam()">
+      <img src="images/team-icon.png" alt="Squadra">
+      <span id="team-count">0</span>
+    </div>
+  </header>
+  
+  <main>
+    <div id="pokemon-catalog">
+        <div class="pokemon-card" onclick="addToteam('Bulbasaur')">
+            <img src="images/bulbasaur.png" alt="Bulbasaur">
+            <h2>Bulbasaur</h2>
+        </div>
+    
+        <div class="pokemon-card" onclick="addToteam('Squirtle')">
+        <img src="images/squirtle.png" alt="Squirtle">
+        <h2>Squirtle</h2>
+        </div>
+
+        <div class="pokemon-card" onclick="addToteam('Charmander')">
+        <img src="images/charmander.png" alt="Charmander">
+        <h2>Charmander</h2>
+        </div>
+        
+        <div class="pokemon-card" onclick="addToteam('Pikachu')">
+        <img src="images/pikachu.png" alt="Pikachu">
+        <h2>Pikachu</h2>
+        </div>
+
+        <div class="pokemon-card" onclick="addToteam('Charizard')">
+        <img src="images/charizard.png" alt="Charizard">
+        <h2>Charizard</h2>
+        </div>
+
+      <div class="pokemon-card" onclick="addToteam('Mew')">
+        <img src="images/mew.png" alt="Mew">
+        <h2>Mew</h2>
+      </div>
+    </div>
+  </main>
+  
+  <div id="team" class="hidden">
+    <h2>Squadra</h2>
+    <ul id="team-items" class="team-image-list"></ul>
+    <button onclick="clearteam()">Svuota Squadra</button>
+  </div>
+  
+  <div id="error-message" class="hidden"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
