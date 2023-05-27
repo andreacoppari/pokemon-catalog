@@ -10,7 +10,7 @@ function addToteam(pokemon) {
     
     const listItem = document.createElement("li");
     const img = document.createElement("img");
-    img.src = "https://andreacoppari.github.io/pokemon-catalog/images/" + pokemon + ".png";
+    img.src = "images/" + pokemon.toLowerCase() + ".png";
     img.alt = pokemon;
     
     const removeButton = document.createElement("button");
