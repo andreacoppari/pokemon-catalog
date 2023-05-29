@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Catalogo Pokemon</title>
+  <title>Catalogo Film</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Catalogo Pokémon</h1>
-    <div id="team-icon" onclick="toggleteam()">
-      <img src="images/team-icon.png" alt="Squadra">
-      <span id="team-count">0</span>
+    <h1>Catalogo Film</h1>
+    <div id="watchlist-icon" onclick="togglewatchlist()">
+      <img src="images/watchlist-icon.png" alt="Watchlist">
+      <span id="watchlist-count">0</span>
     </div>
   </header>
   
   <main>
-    <div id="pokemon-catalog">
-        <div class="pokemon-card" onclick="addToteam('Bulbasaur')">
-            <img src="images/bulbasaur.png" alt="Bulbasaur">
-            <h2>Bulbasaur</h2>
+    <div id="film-catalog">
+      <div class="film-card" onclick="addTowatchlist('mario')">
+      <img src="images/mario.jpg" alt="Super Mario Bros">
+      <h2>The Flash</h2>
+      </div>
+
+      <div class="film-card" onclick="addTowatchlist('sirenetta')">
+            <img src="images/sirenetta.jpg" alt="Sirenetta">
+            <h2>La Sirenetta</h2>
         </div>
     
-        <div class="pokemon-card" onclick="addToteam('Squirtle')">
-        <img src="images/squirtle.png" alt="Squirtle">
-        <h2>Squirtle</h2>
+        <div class="film-card" onclick="addTowatchlist('Oppenheimer')">
+        <img src="images/oppenheimer.jpg" alt="Oppenheimer">
+        <h2>Oppenheimer</h2>
         </div>
 
-        <div class="pokemon-card" onclick="addToteam('Charmander')">
-        <img src="images/charmander.png" alt="Charmander">
-        <h2>Charmander</h2>
+        <div class="film-card" onclick="addTowatchlist('IndianaJones')">
+        <img src="images/indianajones.jpg" alt="Indiana Jones">
+        <h2>Indiana Jones</h2>
         </div>
         
-        <div class="pokemon-card" onclick="addToteam('Pikachu')">
-        <img src="images/pikachu.png" alt="Pikachu">
-        <h2>Pikachu</h2>
+        <div class="film-card" onclick="addTowatchlist('dnd')">
+        <img src="images/dnd.jpg" alt="Dungeon & Dragons">
+        <h2>Dungeon & Dragons</h2>
         </div>
-
-        <div class="pokemon-card" onclick="addToteam('Charizard')">
-        <img src="images/charizard.png" alt="Charizard">
-        <h2>Charizard</h2>
-        </div>
-
-      <div class="pokemon-card" onclick="addToteam('Mew')">
-        <img src="images/mew.png" alt="Mew">
-        <h2>Mew</h2>
-      </div>
+        
+        <div class="film-card" onclick="addTowatchlist('guardiani')">
+        <img src="images/guardiani.jpg" alt="Guardiani della Galassia">
+        <h2>Guardiani della Galassia</h2>
+        </div>  
     </div>
   </main>
   
-  <div id="team" class="hidden">
-    <h2>Squadra</h2>
-    <ul id="team-items" class="team-image-list"></ul>
-    <button onclick="clearteam()">Svuota Squadra</button>
+  <div id="watchlist" class="hidden">
+    <h2>Watchlist</h2>
+    <ul id="watchlist-items" class="watchlist-image-list"></ul>
+    <button onclick="clearwatchlist()">Svuota Watchlist</button>
   </div>
   
   <div id="error-message" class="hidden"></div>

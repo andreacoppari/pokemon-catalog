@@ -6,8 +6,8 @@ body {
   }
   
   header {
-    background-color: #eede02;
-    color: #333333;
+    background-color: #242424;
+    color: #fdfdfd;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -20,18 +20,18 @@ body {
     font-size: 24px;
 }
 
-#team-icon {
+#watchlist-icon {
     position: relative;
     cursor: pointer;
 }
 
-#team-icon img {
-    width: 30px;
+#watchlist-icon img {
+    width: flex;
     height: 30px;
     margin-left: 10px;
 }
 
-#team-count {
+#watchlist-count {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -50,12 +50,12 @@ main {
     padding: 20px;
 }
 
-#pokemon-catalog {
+#film-catalog {
     display: flex;
     flex-wrap: wrap;
 }
 
-.pokemon-card {
+.film-card {
     width: 200px;
     border: 1px solid #ddd;
     padding: 10px;
@@ -64,17 +64,17 @@ main {
     cursor: pointer;
 }
 
-.pokemon-card:hover {
-    background-color: #f5f5f5;
+.film-card:hover {
+    background-color: #b9b9b9;
 }
 
-.pokemon-card img {
+.film-card img {
     width: 150px;
-    height: 150px;
+    height: 200px;
 }
 
 
-#team {
+#watchlist {
     position: fixed;
     top: 50px;
     right: 50px;
@@ -91,7 +91,7 @@ main {
     display: none;
 }
 
-.team-image-list {
+.watchlist-image-list {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -99,14 +99,14 @@ main {
     flex-direction: column;
 }
 
-.team-image-list li {
+.watchlist-image-list li {
     margin: 5px;
     width: auto;
 }
 
-.team-image-list li img {
+.watchlist-image-list li img {
     width: 50px;
-    height: 50px;
+    height: 75px;
 }
 
 #error-message {
@@ -118,6 +118,10 @@ main {
 
 button {
     background-color: #eede02;
+    position:absolute;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
     color: #333333;
     border: none;
     padding: 10px 20px;

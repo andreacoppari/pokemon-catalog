@@ -1,59 +1,59 @@
-let teamCount = 0;
+let watchlistCount = 0;
 
-function addToteam(pokemon) {
-    const teamItems = document.getElementById("team-items");
+function addTowatchlist(film) {
+    const watchlistItems = document.getElementById("watchlist-items");
     
-    if (teamItems.childElementCount >= 6) {
-      displayErrorMessage("La squadra è al completo. Non puoi aggiungere più Pokémon.");
+    if (watchlistItems.childElementCount >= 6) {
+      displayErrorMessage("Puoi inserire solo 6 film nella watchlist");
       return;
     }
     
     const listItem = document.createElement("li");
     const img = document.createElement("img");
-    img.src = "images/" + pokemon.toLowerCase() + ".png";
-    img.alt = pokemon;
+    img.src = "images/" + film.toLowerCase() + ".jpg";
+    img.alt = film;
     
     const removeButton = document.createElement("button");
     removeButton.textContent = "Rimuovi";
     removeButton.addEventListener("click", function() {
       listItem.remove();
-      teamCount--;
-      document.getElementById("team-count").textContent = teamCount;
-      if (teamCount === 0) {
-        document.getElementById("team").classList.add("hidden");
+      watchlistCount--;
+      document.getElementById("watchlist-count").textContent = watchlistCount;
+      if (watchlistCount === 0) {
+        document.getElementById("watchlist").classList.add("hidden");
       }
-      const teamHeight = teamItems.childElementCount * 50;
-      document.getElementById("team").style.height = `${Math.min(teamHeight+200, 1000)}px`;
+      const watchlistHeight = watchlistItems.childElementCount * 50;
+      document.getElementById("watchlist").style.height = `${Math.min(watchlistHeight+200, 1000)}px`;
     });
     
     listItem.appendChild(img);
     listItem.appendChild(removeButton);
-    teamItems.appendChild(listItem);
+    watchlistItems.appendChild(listItem);
     
-    teamCount++;
-    document.getElementById("team-count").textContent = teamCount;
+    watchlistCount++;
+    document.getElementById("watchlist-count").textContent = watchlistCount;
     
-    document.getElementById("team").classList.remove("hidden");
+    document.getElementById("watchlist").classList.remove("hidden");
     
-    const teamHeight = teamItems.childElementCount * 50;
-    document.getElementById("team").style.height = `${Math.min(teamHeight+200, 500)}px`;
+    const watchlistHeight = watchlistItems.childElementCount * 50;
+    document.getElementById("watchlist").style.height = `${Math.min(watchlistHeight+200, 500)}px`;
   }
   
 
-function toggleteam() {
-  document.getElementById("team").classList.toggle("hidden");
+function togglewatchlist() {
+  document.getElementById("watchlist").classList.toggle("hidden");
 }
 
-function clearteam() {
-    const teamItems = document.getElementById("team-items");
-    teamItems.innerHTML = "";
+function clearwatchlist() {
+    const watchlistItems = document.getElementById("watchlist-items");
+    watchlistItems.innerHTML = "";
     
-    teamCount = 0;
-    document.getElementById("team-count").textContent = teamCount;
+    watchlistCount = 0;
+    document.getElementById("watchlist-count").textContent = watchlistCount;
     
-    document.getElementById("team").classList.add("hidden");
+    document.getElementById("watchlist").classList.add("hidden");
     
-    document.getElementById("team").style.height = "auto";
+    document.getElementById("watchlist").style.height = "auto";
   }
 
 
